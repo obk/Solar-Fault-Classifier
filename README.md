@@ -1,4 +1,3 @@
-
 # Solar Fault Classifier
 
 This project implements a Convolutional Neural Network (CNN) for classifying solar panel faults from images. The model detects four types of faults:
@@ -13,30 +12,44 @@ This project implements a Convolutional Neural Network (CNN) for classifying sol
 .
 ├── app.ipynb              # Jupyter notebook for model training
 ├── test.ipynb             # Jupyter notebook for model evaluation
-└── images_classed/        # Images directory (unzip .7z file)
+└── images_classed.7z      # Compressed image dataset (use Git LFS)
 ```
 
-## Dependencies
+## Installation
 
-Install required packages using:
-```bash
-pip install -r requirements.txt
-```
+## Important Notes
+- This repository uses Git LFS for large files:
+  - You must install Git LFS before cloning
+  - Files bigger than 100MB will show as pointers without LFS
+- Dataset must be extracted from `images_classed.7z` before use
 
+1. **Clone the repository with Git LFS**:
+   ```bash
+   git lfs install  # Required for large files
+   git clone https://github.com/obk/Solar-Fault-Classifier
+   ```
+
+2. **Extract the dataset**:
+   ```bash
+   7z x images_classed.7z  # Requires 7zip installed
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 *Note: A GPU is recommended for faster training.*
 
 ## Usage
 
 ### 1. Model Training (`app.ipynb`)
-
-1. Organize your dataset in the `images_classed/` directory with subfolders for each class
+1. Ensure extracted dataset in `images_classed/` directory with subfolders for each class
 2. Run all cells in `app.ipynb`:
-   - Trains the CNN model with data augmentation
+   - Trains CNN model with data augmentation
    - Monitors training progress through accuracy/loss metrics
    - Saves final model as `solar_fault_classifier.h5`
 
 ### 2. Model Evaluation (`test.ipynb`)
-
 1. Execute all cells in `test.ipynb`:
    - Evaluates model performance (using same images due to data limitations)
    - Displays accuracy metrics and visualizations
@@ -45,7 +58,6 @@ pip install -r requirements.txt
 ![Evaluation Metrics](./output1.png)
 
 ### 3. Prediction Examples
-
 Sample evaluation output:
 ```text
 Testing images from class: Bypass_Diode_activated
@@ -59,7 +71,6 @@ Image: img005.jpg | Actual: Single_cell_hotspot | Predicted: Multicell_hotspot
 ![Prediction Visualization](./output2.png)
 
 ## Key Components
-
 - `app.ipynb`: Model training notebook
   - CNN architecture with convolutional layers and dropout
   - Uses ImageDataGenerator for augmentation/validation
@@ -70,7 +81,7 @@ Image: img005.jpg | Actual: Single_cell_hotspot | Predicted: Multicell_hotspot
   - Generates performance metrics
   - Creates visualizations of predictions
 
-- `images_classed/`: Image dataset structure  
+- Dataset structure (`images_classed/`):
   ```
   images_classed/
   ├── Bypass_Diode_activated
@@ -80,7 +91,6 @@ Image: img005.jpg | Actual: Single_cell_hotspot | Predicted: Multicell_hotspot
   ```
 
 ## Specifications
-
 - Input image size: 150 × 150 pixels (RGB)
 - Data augmentation applied during training
 - Comprehensive evaluation metrics included
