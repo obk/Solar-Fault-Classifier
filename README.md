@@ -13,7 +13,7 @@ This project implements a Convolutional Neural Network (CNN) for classifying sol
 .
 ├── app.ipynb              # Jupyter notebook for model training
 ├── test.ipynb             # Jupyter notebook for model evaluation
-└── images_classed/        # Images directory
+└── images_classed/        # Images directory (unzip .7z file)
 ```
 
 ## Dependencies
