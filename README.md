@@ -22,6 +22,7 @@ This project implements a Convolutional Neural Network (CNN) for classifying sol
   - You must install Git LFS before cloning
   - Files bigger than 100MB will show as pointers without LFS
 - Dataset must be extracted from `images_classed.7z` before use
+- Download 7z from [here](https://www.7-zip.org/)
 
 1. **Clone the repository with Git LFS**:
    ```bash
@@ -58,16 +59,6 @@ This project implements a Convolutional Neural Network (CNN) for classifying sol
 ![Evaluation Metrics](./output1.png)
 
 ### 3. Prediction Examples
-Sample evaluation output:
-```text
-Testing images from class: Bypass_Diode_activated
-Image: img001.jpg | Actual: Bypass_Diode_activated | Predicted: Bypass_Diode_activated
-...
-Testing images from class: Single_cell_hotspot 
-Image: img005.jpg | Actual: Single_cell_hotspot | Predicted: Multicell_hotspot
-...
-```
-
 ![Prediction Visualization](./output2.png)
 
 ## Key Components
