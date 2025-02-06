@@ -81,10 +81,4 @@ This project implements a Convolutional Neural Network (CNN) for classifying sol
   └── Single_cell_hotspot
   ```
 
-## Specifications
-- Input image size: 150 × 150 pixels (RGB)
-- Data augmentation applied during training
-- Comprehensive evaluation metrics included
-- Visualizations for model interpretation
-
 For questions or issues, please open an issue in the repository.
